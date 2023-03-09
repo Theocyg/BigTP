@@ -12,7 +12,7 @@ import java.sql.Statement;
 import java.util.Properties;
 
 public class Controleur {
-    public void traiterRequete(Connection conn) throws SQLException {
+    public void traiterRequete(Connection conn) throws SQLException implements Vue1 {
 
         ResultSet rst1 = null, rst2 = null, rst3 = null;
 
@@ -36,5 +36,7 @@ public class Controleur {
         } catch (Exception se) {
             System.out.println(se.getMessage());
         }
+
+
     }
 }

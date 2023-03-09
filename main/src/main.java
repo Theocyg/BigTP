@@ -1,7 +1,7 @@
 package bddgraph;
 import bddgraph.Controller.Controleur;
 import bddgraph.Model.Connexion;
-
+import View*;
 import java.sql.*;
 import java.util.*;
 import java.awt.*;
@@ -23,5 +23,9 @@ public class BDDrestau {
 
         //Appel du controller
         ctl1.traiterRequete(conn);
+
+        // Créer une instance de la fenêtre
+        new Vue1();
+
     }
 }

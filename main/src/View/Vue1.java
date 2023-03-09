@@ -62,21 +62,14 @@ public class Vue1 extends JFrame{
                 }
             });
 
+            /*
             okButton.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     String nom = textFieldnom.getText();
                     char[] password = passwordField.getPassword();
                     try {
-                        // Charger le driver JDBC
-                        Class.forName("com.mysql.cj.jdbc.Driver");
 
-                        // Établir la connexion avec la base de données
-                        String url = "jdbc:mysql://localhost:3306/bddgraph";
-                        String user = "user";
-                        String passwordDB = "root;
-                        Connection conn = DriverManager.getConnection(url, user, passwordDB);
-
-                        // Préparer la requête SQL pour l'insertion
+                        // Préparer la requête SQL pour l'insertion A METTRE DANS LE CONTROLEUR
                         String query = "INSERT INTO utilisateur (nom_utilisateur, mot_de_passe) VALUES (?, ?)";
                         PreparedStatement statement = conn.prepareStatement(query);
                         statement.setString(1, nom);
@@ -88,9 +81,6 @@ public class Vue1 extends JFrame{
                             System.out.println("Les données ont été insérées avec succès dans la base de données.");
                         }
 
-                        // Fermer la connexion avec la base de données
-                        conn.close();
-
                     } catch (SQLException ex) {
                         System.out.println("Une erreur s'est produite lors de l'insertion des données dans la base de données : " + ex.getMessage());
                     } catch (ClassNotFoundException ex) {
@@ -98,15 +88,17 @@ public class Vue1 extends JFrame{
                     }
                 }
             });
-
+            */
 
             // Rendre la fenêtre visible
             setVisible(true);
         }
-
-        public static void main (String[]args){
-            // Créer une instance de la fenêtre
-            new Vue1();
+        public void addOKListener(ActionListner listener){
+            okButton.addActionListener(listener);
         }
+
+        public void
+
+
     }
 
